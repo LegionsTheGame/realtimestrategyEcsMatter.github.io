@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+  html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: yellow;
+  }
+
+  body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      max-height: 100%;
+      background: green;
+      float: left;
+      width: 100%;
+  }
+
+  h1 {
+      background: gray;
+  }
+</style>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+</head>
+<body>
+  <script src="pixi.min.js"></script>
+  <script type="text/javascript">
+  const app = new PIXI.Application({
+  	autoResize: true,
+    resolution: devicePixelRatio
+  });
+  document.body.appendChild(app.view);
+
+  // Lets create a red square, this isn't
+  // necessary only to show something that can be position
+  // to the bottom-right corner
+  /*const rect = new PIXI.Graphics()
+  	.beginFill(0xff0000)
+    .drawRect(-100, -100, 100, 100);
+
+  // Add it to the stage
+  app.stage.addChild(rect);*/
+
+  // Listen for window resize events
+  window.addEventListener('resize', resize);
+
+  // Resize function window
+  function resize() {
+  	// Resize the renderer
+  	app.renderer.resize(window.innerWidth, window.innerHeight);
+
+    // You can use the 'screen' property as the renderer visible
+    // area, this is more useful than view.width/height because
+    // it handles resolution
+  //  rect.position.set(app.screen.width, app.screen.height);
+  }
+
+  addEventListener("click", function() {
+      var
+            el = document.documentElement
+          , rfs =
+                 el.requestFullScreen
+              || el.webkitRequestFullScreen
+              || el.mozRequestFullScreen
+      ;
+      rfs.call(el);
+  });
+
+  resize();
+  </script>
+  <script src="MathUtils.js"></script>
+  <script src="Object_Army.js"></script>
+  <script src="System_Move.js"></script>
+  <script src="System_Collision.js"></script>
+  <script src="GameLoop.js"></script>
+</body>
+</html>
