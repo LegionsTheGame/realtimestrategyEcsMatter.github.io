@@ -10,9 +10,12 @@ function system_moveArmy(container) {
     c.offsetY = yo;
   }
 
-  var mousePosition = app.renderer.plugins.interaction.mouse.global;;
+  //mousePosition = app.renderer.plugins.interaction.mouse.global;;
 
-  var a = Math.atan2(mousePosition.y - container.y, mousePosition.x - container.x);
+//  var a = Math.atan2(mousePosition.y - container.y, mousePosition.x - container.x);
+
+  var a = Math.atan2(my - container.y, mx - container.x);
+
   var d = getUnitVector(a);
 
   container.rotation -= 0.01; //just testing
@@ -20,3 +23,8 @@ function system_moveArmy(container) {
   container.x += d[0];
   container.y += d[1];
 }
+
+//attempt to follow - touch events
+let mx = 100;
+let my = 100;
+app.renderer.plugins.interaction.on( 'pointerdown', ( event ) => { mx = event.data.global.x; my = event.data.global.y; console.log( event.data.global ); } );
