@@ -7,7 +7,7 @@ function rotateVector2D(vec, ang) {
 }
 
 function unitVector(vec) {
-  var l = Math.sqrt(vec[0] * vec[0] + vec[1] * vec[1]);
+  var l = getDistance(vec);//Math.sqrt(vec[0] * vec[0] + vec[1] * vec[1]);
   var newX = Math.round(1000 * (vec[0] / l)) / 1000;
   var newY = Math.round(1000 * (vec[1] / l)) / 1000;
   return [newX, newY];
@@ -15,4 +15,8 @@ function unitVector(vec) {
 
 function getUnitVector(ang) {
   return [Math.cos(ang), Math.sin(ang)];
+}
+
+function getDistance(vec){
+  return Math.sqrt(vec[0] * vec[0] + vec[1] * vec[1]);
 }

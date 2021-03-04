@@ -1,4 +1,5 @@
 function system_moveArmy(container) {
+  //Dette er de enkelte "bunnies" der bevæger sig!!
   for (var i = 0; i < container.children.length; i++) {
     var c = container.children[i];
     var xo = Math.random() - Math.random();
@@ -10,18 +11,16 @@ function system_moveArmy(container) {
     c.offsetY = yo;
   }
 
-  //mousePosition = app.renderer.plugins.interaction.mouse.global;;
-
-//  var a = Math.atan2(mousePosition.y - container.y, mousePosition.x - container.x);
+  //mousePosition = app.renderer.plugins.interaction.mouse.global;
+  //  var a = Math.atan2(mousePosition.y - container.y, mousePosition.x - container.x);
 
   var a = Math.atan2(my - container.y, mx - container.x);
+  this.d = getUnitVector(a);
 
-  var d = getUnitVector(a);
+  //container.rotation -= 0.01; //just testing
 
-  container.rotation -= 0.01; //just testing
-
-  container.x += d[0];
-  container.y += d[1];
+    container.x += this.d[0];
+    container.y += this.d[1];
 }
 
 //attempt to follow - touch events

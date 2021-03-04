@@ -19,6 +19,8 @@ function newArmy(armyPositionX, armypositionY){
     bunny.x = (i % 5) * 20;
     bunny.y = Math.floor(i / 5) * 20;
     container.addChild(bunny);
+
+    container.army_contact = false;
   }
 
   // Move container to the center
