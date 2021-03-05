@@ -18,7 +18,7 @@
 :fullscreen {
   background-color: black;
 }
- /*html {
+ html {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -37,7 +37,7 @@
 
   h1 {
       background: gray;
-  }*/
+  }
 </style>
   <meta charset="utf-8">
   <title>Hello World</title>
@@ -45,11 +45,10 @@
 <body>
   <script src="pixi.min.js"></script>
   <script type="text/javascript">
-  const app = new PIXI.Application();
-    /*{
+  const app = new PIXI.Application({
   	autoResize: true,
     resolution: devicePixelRatio
-  });*/
+  });
 
 
   // Lets create a red square, this isn't
@@ -69,7 +68,7 @@
   function resize() {
   	// Resize the renderer
 
-  //	app.renderer.resize(window.innerWidth, window.innerHeight);
+	app.renderer.resize(window.innerWidth, window.innerHeight);
 
     // You can use the 'screen' property as the renderer visible
     // area, this is more useful than view.width/height because
@@ -107,6 +106,7 @@
         }
 
         document.body.appendChild(app.view);
+        app.renderer.resize(window.innerWidth, window.innerHeight);
 
 
   });
