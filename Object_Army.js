@@ -6,6 +6,9 @@ function newArmy(armyPositionX, armypositionY){
 
   app.stage.addChild(container);
 
+  PIXI.settings.SORTABLE_CHILDREN = true;
+
+
   // Create a new texture
   const texture = PIXI.Texture.from('explorer.png');
 
@@ -16,11 +19,10 @@ function newArmy(armyPositionX, armypositionY){
     bunny.offsetY = 0;
 
     bunny.anchor.set(0.5);
-    bunny.x = (i % 5) * 20;
-    bunny.y = Math.floor(i / 5) * 20;
+    bunny.x = (i % 5) * 23;
+    bunny.y = Math.floor(i / 5) * 23;
     container.addChild(bunny);
 
-    container.army_contact = false;
   }
 
   // Move container to the center

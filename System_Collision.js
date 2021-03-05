@@ -3,7 +3,19 @@ function system_collsionHandling(container1) {
     var container2 = app.stage.children[j];
     if (container2 == container1) return; //{                //Prevent "self collision"
     if (circle_collision_detect(container1.getBounds(), container2.getBounds())) {
+      //COLISION DETECTED
+
       move_away(container1, container2);
+
+      if(container1.getBounds().y > container2.getBounds().y){
+        //var z = container1.zIndex;
+        //container1.zIndex +=1 ;
+        console.log(container1.zIndex);
+        //container2.zIndex = ;
+        //app.stage.updateTransform();
+
+      }
+
     }
   }
 }
