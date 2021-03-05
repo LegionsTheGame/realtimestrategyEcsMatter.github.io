@@ -51,7 +51,6 @@
     resolution: devicePixelRatio
   });*/
 
-  document.body.appendChild(app.view);
 
   // Lets create a red square, this isn't
   // necessary only to show something that can be position
@@ -106,6 +105,9 @@
         }else if (elem.mozRequestFullScreen){
           elem.mozRequestFullScreen();
         }
+
+        document.body.appendChild(app.view);
+
 
   });
 
