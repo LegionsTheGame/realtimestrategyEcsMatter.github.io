@@ -45,11 +45,13 @@
 <body>
   <script src="pixi.min.js"></script>
   <script type="text/javascript">
-  const app = new PIXI.Application({
+  const app = new PIXI.Application();
+    /*{
   	autoResize: true,
     resolution: devicePixelRatio
-  });
-//  document.body.appendChild(app.view);
+  });*/
+
+  document.body.appendChild(app.view);
 
   // Lets create a red square, this isn't
   // necessary only to show something that can be position
