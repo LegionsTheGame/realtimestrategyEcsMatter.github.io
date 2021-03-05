@@ -113,13 +113,19 @@
 
         app.renderer.resize(window.innerWidth, window.innerHeight);
 
+        if(appView)
+        document.body.removeChild(appView);
 
-        document.body.appendChild(app.view);
+        appView = app.view;
+
+        document.body.appendChild(appView);
 
     //    screen.orientation.lock("landscape-primary");
 
 
   });
+
+  let appView;
 
 //  resize();
   </script>
