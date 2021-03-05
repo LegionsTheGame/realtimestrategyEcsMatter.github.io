@@ -107,7 +107,7 @@
     //  app.renderer.resize(window.innerWidth, window.innerHeight);
 */
 
-screen.orientation.lock("portrait");
+//screen.mozLockOrientation.lock("portrait-primary");
 
   var elem = document.documentElement;
 
@@ -123,6 +123,8 @@ screen.orientation.lock("portrait");
 
         document.body.appendChild(app.view);
         app.renderer.resize(window.innerWidth, window.innerHeight);
+
+        screen.orientation.lock("portrait-primary");
 
 
   });
