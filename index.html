@@ -18,7 +18,7 @@
 :fullscreen {
   background-color: black;
 }
- html {
+ /*html {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -37,7 +37,7 @@
 
   h1 {
       background: gray;
-  }
+  }*/
 </style>
   <meta charset="utf-8">
   <title>Hello World</title>
@@ -79,7 +79,7 @@
   addEventListener("click", function() {
 
 
-    /*  var
+  /*    var
             el = document.documentElement
           , rfs =
                  el.requestFullScreen
@@ -87,16 +87,19 @@
               || el.mozRequestFullScreen
               || el.msRequestFullscreen
       ;
-      rfs.call(el);*/
+      rfs.call(el);
 
-      app.renderer.resize(window.innerWidth, window.innerHeight);
+    //  app.renderer.resize(window.innerWidth, window.innerHeight);
+*/
 
 
-      if (elem.requestFullscreen) {
+  var elem = document.documentElement;
+
+   if (elem.requestFullscreen) {
           elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) { /* Safari */
+        } else if (elem.webkitRequestFullscreen) { // Safari
           elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE11 */
+        } else if (elem.msRequestFullscreen) { //IE11
           elem.msRequestFullscreen();
         }else if (elem.mozRequestFullScreen){
           elem.mozRequestFullScreen();
