@@ -72,8 +72,8 @@
   // Resize function window
   function resize() {
   	// Resize the renderer
-
-	app.renderer.resize(window.innerWidth, window.innerHeight);
+    console.log("resize function");
+	   app.renderer.resize(window.innerWidth, window.innerHeight);
 
     // You can use the 'screen' property as the renderer visible
     // area, this is more useful than view.width/height because
@@ -98,6 +98,7 @@
 */
 
 //screen.mozLockOrientation.lock("portrait-primary");
+if (document.fullscreenElement) return;
 
   var elem = document.documentElement;
 
@@ -111,21 +112,20 @@
           elem.mozRequestFullScreen();
         }
 
-        app.renderer.resize(window.innerWidth, window.innerHeight);
+      //  app.renderer.resize(window.innerWidth, window.innerHeight);
 
-        if(appView)
-        document.body.removeChild(appView);
+      //  if(appView)
+      //  document.body.removeChild(appView);
 
-        appView = app.view;
-
-        document.body.appendChild(appView);
+//        appView = app.view;
+        console.log("click fullscreen");
+        document.body.appendChild(app.view);
 
     //    screen.orientation.lock("landscape-primary");
 
 
   });
 
-  let appView;
 
 //  resize();
   </script>
