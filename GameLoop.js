@@ -1,4 +1,4 @@
-for (var k = 0; k < 5; k++) {
+for (var k = 0; k < 10; k++) {
   newArmy(200 * k + 200, 100);
 }
 
