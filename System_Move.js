@@ -1,7 +1,22 @@
 function system_moveArmy(container) {
+
+  if(container.info)
+  container.info.setText(
+  "x:" + container.x.toFixed(0)+"\r"+
+  "y="+ container.y.toFixed(0) +"\r"+
+  "XNR=" +Math.floor(container.x/100)+"\r"+
+  "YNR=" +Math.floor(container.y/100)
+  );
+
+
+
   //Dette er de enkelte "bunnies" der bevæger sig!!
   for (var i = 0; i < container.children.length; i++) {
+
     var c = container.children[i];
+
+    if(c==container.info)continue; //Ikke bevæge teksten
+
     var xo = Math.random() - Math.random();
     var yo = Math.random() - Math.random();
 
@@ -10,6 +25,8 @@ function system_moveArmy(container) {
     c.offsetX = xo;
     c.offsetY = yo;
   }
+
+
 
   //mousePosition = app.renderer.plugins.interaction.mouse.global;
   //  var a = Math.atan2(mousePosition.y - container.y, mousePosition.x - container.x);

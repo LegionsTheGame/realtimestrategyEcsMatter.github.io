@@ -1,12 +1,18 @@
 function newArmy(armyPositionX, armypositionY){
 
+
+
   const direction = [Math.random(),Math.random()];
 
   const container = new PIXI.Container();
 
+  //container name
+  container.name = "army";
+
   app.stage.addChild(container);
 
   PIXI.settings.SORTABLE_CHILDREN = true;
+
 
 
   // Create a new texture
@@ -24,6 +30,13 @@ function newArmy(armyPositionX, armypositionY){
     container.addChild(bunny);
 
   }
+
+  //INFO TEXT.....
+  let text = new PIXI.Text('This is a PixiJS text',{fontFamily : 'Arial', fontSize: 24, fill : 0xFFFFFF, align : 'center'});
+  container.info = text;
+  container.addChild(text);
+
+
 
   // Move container to the center
   container.x = armyPositionX; //app.screen.width / 2;
