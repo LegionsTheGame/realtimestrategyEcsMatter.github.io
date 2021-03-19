@@ -1,5 +1,6 @@
 function system_moveArmy(container) {
 
+
   if(container.info)
   container.info.setText(
   "x:" + container.x.toFixed(0)+"\r"+

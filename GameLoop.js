@@ -1,6 +1,9 @@
-//Spilobjekter
-for (var k = 0; k < 3; k++) {
-  newArmy(200 * k + 200, 100);
+var armies = [];
+
+//Create Spilobjekter
+for (var k = 0; k < 60; k++) {
+  let a = newArmy(200 * k + 200, 100);
+  armies.push(a);
 }
 
 //Debug grafik
@@ -10,16 +13,13 @@ gridDebug();
 //Game loop
 app.ticker.add((delta) => {
 
-  for (var j = 0; j < app.stage.children.length; j++) {
-    var container = app.stage.children[j];
-    //Army: Stuff
-    if (container.name == "army") {
+  for(var i= 0; i < armies.length ; i++){
+     var c = armies[i]; //virker ikke med for-in loop ??
 
-      //ARMY: Collision detection
-      system_collsionHandling(container);
-      //ARMY: Movement
-      system_moveArmy(container);
+      system_collsionHandling_slow(c); //meget langsom collision handling
+      system_moveArmy(c);
     }
-  }
+
+
 
 });

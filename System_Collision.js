@@ -1,4 +1,4 @@
-function system_collsionHandling(container1) {
+function system_collsionHandling_slow(container1) {
   for (var j = 0; j < app.stage.children.length; j++) { //NOT FINISHED : shold only be all containers
     var container2 = app.stage.children[j];
     if (container2 == container1) return; //{                //Prevent "self collision"
@@ -6,15 +6,6 @@ function system_collsionHandling(container1) {
       //COLISION DETECTED
 
       move_away(container1, container2);
-
-      if(container1.getBounds().y > container2.getBounds().y){
-        //var z = container1.zIndex;
-        //container1.zIndex +=1 ;
-        console.log(container1.zIndex);
-        //container2.zIndex = ;
-        //app.stage.updateTransform();
-
-      }
 
     }
   }
