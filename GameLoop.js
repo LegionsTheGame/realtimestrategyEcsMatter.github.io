@@ -1,25 +1,35 @@
+//array - spilobjekter
 var armies = [];
 
-//Create Spilobjekter
-for (var k = 0; k < 60; k++) {
+//skabe - spilobjekter
+for (var k = 0; k < 100; k++) {
   let a = newArmy(200 * k + 200, 100);
   armies.push(a);
+
+  addDbugTextTo(a);
 }
 
 //Debug grafik
 gridDebug();
 
-
 //Game loop
 app.ticker.add((delta) => {
 
-  for(var i= 0; i < armies.length ; i++){
-     var c = armies[i]; //virker ikke med for-in loop ??
+  collisionSystem2_init_collision_grid();
 
-      system_collsionHandling_slow(c); //meget langsom collision handling
-      system_moveArmy(c);
+  for(var i= 0; i < armies.length ; i++){
+
+      var a = armies[i];                     //virker ikke med for-in loop - ved ikke hvorfor ??
+
+      collisionSystem2_update_collision_grid(a);
+
+      //collisionSystem1_collsionHandling(a);    //meget langsom collision handling
+
+      system_moveArmy(a);
+
+      //updateDebugText(a);
     }
 
-
+    collisionSystem2_collisionHandling();
 
 });

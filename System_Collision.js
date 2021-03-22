@@ -1,4 +1,4 @@
-function system_collsionHandling_slow(container1) {
+function collisionSystem1_collsionHandling(container1) {
   for (var j = 0; j < app.stage.children.length; j++) { //NOT FINISHED : shold only be all containers
     var container2 = app.stage.children[j];
     if (container2 == container1) return; //{                //Prevent "self collision"

@@ -1,16 +1,6 @@
 function system_moveArmy(container) {
 
 
-  if(container.info)
-  container.info.setText(
-  "x:" + container.x.toFixed(0)+"\r"+
-  "y="+ container.y.toFixed(0) +"\r"+
-  "XNR=" +Math.floor(container.x/100)+"\r"+
-  "YNR=" +Math.floor(container.y/100)
-  );
-
-
-
   //Dette er de enkelte "bunnies" der bevæger sig!!
   for (var i = 0; i < container.children.length; i++) {
 

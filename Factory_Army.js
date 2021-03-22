@@ -8,8 +8,6 @@ function newArmy(armyPositionX, armypositionY){
 
   PIXI.settings.SORTABLE_CHILDREN = true;
 
-
-
   // Create a new texture
   let texture = PIXI.Texture.from('pics/explorer.png');
 
@@ -20,18 +18,11 @@ function newArmy(armyPositionX, armypositionY){
     bunny.offsetY = 0;
 
     bunny.anchor.set(0.5);
-    bunny.x = (i % 4) * 23;
-    bunny.y = Math.floor(i / 4) * 23;
+    bunny.x = (i % 4) * 10;
+    bunny.y = Math.floor(i / 4) * 10;
     container.addChild(bunny);
 
   }
-
-  //INFO TEXT.....
-  let text = new PIXI.Text('This is a PixiJS text',{fontFamily : 'Arial', fontSize: 18, fill : 0xFFFFFF, align : 'center'});
-  container.info = text;
-  container.addChild(text);
-
-
 
   // Move container to the center
   container.x = armyPositionX; //app.screen.width / 2;
