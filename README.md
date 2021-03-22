@@ -1,7 +1,8 @@
 # realtimestrategyEcsMatter.github.io
 
-## D.23/3 - ?
-Der arbejdes på en form for "uniform-grid-collision-detection"
+## D.23/3 - 2021
+Der arbejdes på en form for "uniform-grid-collision-detection"</br>
+Jeg har valgt at prøve at udvikle en simpel metode selv, baseret på to forskellige undform grids der er lidt forskudte.</br>
 
 ## D.27/2 - 2021
 Det næste der skal ordnes er "full-skærm" på alle enheder</br>
