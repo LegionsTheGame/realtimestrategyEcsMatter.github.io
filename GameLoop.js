@@ -1,35 +1,42 @@
+//grid
+var collision_grid1 = [];
+var collision_grid2 = [];
+
+
 //array - spilobjekter
 var armies = [];
 
 //skabe - spilobjekter
-for (var k = 0; k < 100; k++) {
+for (var k = 0; k < 200; k++) {
   let a = newArmy(200 * k + 200, 100);
   armies.push(a);
 
-  addDbugTextTo(a);
+  //  addDbugTextTo(a);
 }
 
 //Debug grafik
-gridDebug();
+//gridDebug();
 
 //Game loop
 app.ticker.add((delta) => {
 
-  collisionSystem2_init_collision_grid();
+  collision_grid1 = []; //GRIDSYSTEM  - 1 / 3
+  collision_grid2 = [];
 
-  for(var i= 0; i < armies.length ; i++){
+  for (var i = 0; i < armies.length; i++) {
 
-      var a = armies[i];                     //virker ikke med for-in loop - ved ikke hvorfor ??
+    var a = armies[i]; //virker ikke med for-in loop - ved ikke hvorfor ??
 
-      collisionSystem2_update_collision_grid(a);
+    collisionSystem2_update_collision_grid(a, collision_grid1, 0); //GRIDSYSTEM  - 2 / 3
+    collisionSystem2_update_collision_grid(a, collision_grid2, 50);
 
-      //collisionSystem1_collsionHandling(a);    //meget langsom collision handling
+    //collisionSystem1_collsionHandling(a); //meget langsom collision handling
 
-      system_moveArmy(a);
+    system_moveArmy(a);
 
-      //updateDebugText(a);
-    }
+    //updateDebugText(a);
+  }
 
-    collisionSystem2_collisionHandling();
-
+  collisionSystem2_collisionHandling(collision_grid1); //GRIDSYSTEM  - 3 / 3
+  collisionSystem2_collisionHandling(collision_grid2);
 });

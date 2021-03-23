@@ -8,7 +8,7 @@ function gridDebug() {
     let myGraph = new PIXI.Graphics();
 
     // Move it to the beginning of the line
-    myGraph.position.set(100*i, 0);
+    myGraph.position.set(grid1_field_width*i, 0);
 
     // Draw the line (endPoint should be relative to myGraph's position)
     myGraph.lineStyle(2, 0xffffff)
@@ -22,7 +22,7 @@ function gridDebug() {
     let myGraph = new PIXI.Graphics();
 
     // Move it to the beginning of the line
-    myGraph.position.set(0, 100*i);
+    myGraph.position.set(0, grid1_field_height*i);
 
     // Draw the line (endPoint should be relative to myGraph's position)
     myGraph.lineStyle(2, 0xffffff)
