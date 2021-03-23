@@ -1,5 +1,8 @@
 # realtimestrategyEcsMatter.github.io
 
+## Spillet:
+https://realtimestrategyecsmatter.github.io/
+
 ## Udviklings strategi:
 Under udviklingen af spillet, har jeg defineret følgende principper:
 
