@@ -23,11 +23,11 @@ function move_away(container1, container2) {
   var delta   =  [a_center_x - b_center_x, a_center_y - b_center_y];
   var delta_l =  getDistance(delta);
   var unit1   =  unitVector(delta);
-  var moveDist = ( bounds1.width + bounds1.height + bounds2.width + bounds2.height)/4 - delta_l;
-  container1.x += unit1[0] * moveDist*0.5; //prøver at flytte dem lidt mindre!!
-  container1.y += unit1[1] * moveDist*0.5;
-  container2.x -= unit1[0] * moveDist*0.5;
-  container2.y -= unit1[1] * moveDist*0.5;
+  var moveDist = 0.5*(( bounds1.width + bounds1.height + bounds2.width + bounds2.height)/4 - delta_l);
+  container1.x += unit1[0] * moveDist;
+  container1.y += unit1[1] * moveDist;
+  container2.x -= unit1[0] * moveDist;
+  container2.y -= unit1[1] * moveDist;
 }
 
 function circle_collision_detect(bounds1, bounds2) {

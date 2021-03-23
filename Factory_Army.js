@@ -18,8 +18,8 @@ function newArmy(armyPositionX, armypositionY){
     bunny.offsetY = 0;
 
     bunny.anchor.set(0.5);
-    bunny.x = (i % 4) * 10;
-    bunny.y = Math.floor(i / 4) * 10;
+    bunny.x = (i % 4) * 12;
+    bunny.y = Math.floor(i / 4) * 12;
     container.addChild(bunny);
 
   }

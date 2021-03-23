@@ -8,14 +8,14 @@ var armies = [];
 
 //skabe - spilobjekter
 for (var k = 0; k < 200; k++) {
-  let a = newArmy(200 * k + 200, 100);
+  let a = newArmy(100 * k + 100, 100);
   armies.push(a);
 
   //  addDbugTextTo(a);
 }
 
 //Debug grafik
-//gridDebug();
+gridDebug();
 
 //Game loop
 app.ticker.add((delta) => {
@@ -28,7 +28,7 @@ app.ticker.add((delta) => {
     var a = armies[i]; //virker ikke med for-in loop - ved ikke hvorfor ??
 
     collisionSystem2_update_collision_grid(a, collision_grid1, 0); //GRIDSYSTEM  - 2 / 3
-    collisionSystem2_update_collision_grid(a, collision_grid2, 50);
+    collisionSystem2_update_collision_grid(a, collision_grid2, grid_offset);
 
     //collisionSystem1_collsionHandling(a); //meget langsom collision handling
 
