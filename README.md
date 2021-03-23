@@ -13,7 +13,14 @@ Under udviklingen af spillet, har jeg defineret følgende principper:
 Nedenfor har jeg skrevet de vigtigste tanker vedrørende projektet. </br>
 Jeg har på forskellige tidspunkter haft forskellige fokuspunkter som man kan læse om nedenfor. 
 
-### D.23/3 - 2021
+### D.23/3 -2021
+Brug af uniform grid collision.</br> Det ser ud som om flere felter med få objekter er bedre end få felter med mange objekter:</br>
+Feks: opdeing af 100 objeketer</br>
+10 felter * (10 objekter)^2 = 1000 beregninger</br>
+20 felter * (5 objeketer)^2 = 500 beregninger</br>
+osv.</br>
+
+### D.22/3 - 2021
 Der arbejdes på en form for "uniform-grid-collision-detection"</br>
 Jeg har valgt at prøve at udvikle en simpel metode selv, baseret på to forskellige undform grids der er lidt forskudte.</br>
 
