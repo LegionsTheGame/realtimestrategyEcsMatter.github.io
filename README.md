@@ -15,8 +15,11 @@ Nedenfor har jeg skrevet de vigtigste tanker vedrørende projektet. </br>
 Jeg har på forskellige tidspunkter haft forskellige fokuspunkter som man kan læse om nedenfor. 
 
 ### D.26/3 -2021
-Introduktion af "army path following" 
-Min "Double Uniform Collision Detection" virker kun bedst hvis alle enheder ikke er på samme sted....
+Introduktion af "army path following" </br>
+Min "Double Uniform Collision Detection" virker kun bedst hvis alle enheder ikke er på samme sted....</br>
+</br>
+Her ses hvorfor "dobbelt grid" er nødvendigt:
+![](pics/single_uniform_grid.png)
 
 
 ### D.23/3 -2021
@@ -25,6 +28,7 @@ Feks: opdeing af 100 objeketer</br>
 10 felter * (10 objekter)^2 = 1000 beregninger</br>
 20 felter * (5 objeketer)^2 = 500 beregninger</br>
 osv.</br>
+
 
 ### D.22/3 - 2021
 Der arbejdes på en form for "uniform-grid-collision-detection"</br>
