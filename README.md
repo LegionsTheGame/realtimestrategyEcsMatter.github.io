@@ -16,12 +16,12 @@ Jeg har på forskellige tidspunkter haft forskellige fokuspunkter som man kan l�
 
 ### D.26/3 -2021
 
-###NR 2
+### NR 2
 Har erkendt at for tildelingen til "uniform grid" har spilobjektet størrelse som et "punkt"</br>
 Dette er ikke hensigsmæssigt!!!</br>
 En spilobjekt burde kunne være i to "felter" på samme tid
 
-###NR 1
+### NR 1
 Introduktion af "army path following" </br>
 Min "Double Uniform Collision Detection" virker kun bedst hvis alle enheder ikke er på samme sted....</br>
 </br>
