@@ -15,6 +15,8 @@ Nedenfor har jeg skrevet de vigtigste tanker vedrørende projektet. </br>
 Jeg har på forskellige tidspunkter haft forskellige fokuspunkter som man kan læse om nedenfor. 
 
 ### D.26/3 -2021
+Introduktion af "army path following" 
+Min "Double Uniform Collision Detection" virker kun bedst hvis alle enheder ikke er på samme sted....
 
 
 ### D.23/3 -2021
