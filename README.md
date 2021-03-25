@@ -6,12 +6,16 @@ https://realtimestrategyecsmatter.github.io/
 ## Udviklings strategi:
 Under udviklingen af spillet, har jeg defineret følgende principper:
 
-* Det der forekommer sværest, skal om muligt udvikles først.
-* Stres-test systemet hver gang det er muligt. 
+* Det sværeste, skal udvikles først.
+* Stres-test hver gang det er muligt.
+* Refaktorering af kode - anvend "Data Driven" og "Entity Component System" design  
 
 ## Logbog:
 Nedenfor har jeg skrevet de vigtigste tanker vedrørende projektet. </br>
 Jeg har på forskellige tidspunkter haft forskellige fokuspunkter som man kan læse om nedenfor. 
+
+### D.26/3 -2021
+
 
 ### D.23/3 -2021
 Brug af uniform grid collision.</br> Det ser ud som om flere felter med få objekter er bedre end få felter med mange objekter:</br>
