@@ -2,7 +2,7 @@ function system_moveArmy(container) {
 
 
   //Dette er de enkelte "bunnies" der bevæger sig!!
-  for (var i = 0; i < container.children.length; i++) {
+/*  for (var i = 0; i < container.children.length; i++) {
 
     var c = container.children[i];
 
@@ -15,7 +15,7 @@ function system_moveArmy(container) {
     c.y = c.y - c.offsetY + yo;
     c.offsetX = xo;
     c.offsetY = yo;
-  }
+  }*/
 
 
 
@@ -23,12 +23,15 @@ function system_moveArmy(container) {
   //  var a = Math.atan2(mousePosition.y - container.y, mousePosition.x - container.x);
 
   var a = Math.atan2(my - container.y, mx - container.x);
+
+if(getDistance([my - container.y, mx - container.x])<3)return;
+
   this.d = getUnitVector(a);
 
   //container.rotation -= 0.01; //just testing
 
-    container.x += this.d[0];
-    container.y += this.d[1];
+    container.x += this.d[0]*2;
+    container.y += this.d[1]*2;
 }
 
 //attempt to follow - touch events

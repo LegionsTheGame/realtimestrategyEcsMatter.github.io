@@ -1,8 +1,8 @@
 
-function collisionSystem2_update_collision_grid(army,collision_grid,offset) {
+function collisionSystem2_update_collision_grid(army, collision_grid,offset, grid_size) {
 
-  var col = Math.floor((army.x+offset) / grid1_field_width);
-  var row = Math.floor((army.y+offset) / grid1_field_height);
+  var col = Math.floor((army.x - offset) / grid_size); //størrelsen af en enhed er som et "punkt"
+  var row = Math.floor((army.y - offset) / grid_size);
 
   if (col > 10 || row > 10) return; //grid 10x10 : kun detection indenfor dettte område
 

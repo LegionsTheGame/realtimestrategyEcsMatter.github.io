@@ -1,4 +1,5 @@
-const grid1_field_width  = 175;
-const grid1_field_height = 175;
+const grid1_size  = 200;
 
-const grid_offset = 50;
+const grid2_size  = 150;
+
+const grid_offset = 25;

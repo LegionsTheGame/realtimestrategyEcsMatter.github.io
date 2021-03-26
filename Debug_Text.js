@@ -8,16 +8,14 @@ function addDbugTextTo(container){
 function updateDebugText(container){
   if(container.info)
   container.info.setText(
-  "x:" + container.x.toFixed(0)+"\r"+
-  "y="+ container.y.toFixed(0) +"\r"+
-  "XNR=" +Math.floor(container.x/100)+"\r"+
-  "YNR=" +Math.floor(container.y/100)
+    "grid1=" + (Math.floor(container.x/grid1_size)*10 + Math.floor(container.y/grid1_size)) + "\r"+
+    "grid2=" + (Math.floor((container.x - grid_offset)/grid2_size)*10 + Math.floor((container.y - grid_offset)/grid2_size))
   );
 }
 
 function updateDebugTextGrid(container,grid_index){
   if(container.info)
   container.info.setText(
-  "index:" + grid_index 
+  "index:" + grid_index
   );
 }
