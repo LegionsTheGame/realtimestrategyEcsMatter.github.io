@@ -24,7 +24,7 @@ function system_moveArmy(container) {
 
   var a = Math.atan2(my - container.y, mx - container.x);
 
-if(getDistance([my - container.y, mx - container.x])<3)return;
+if(getDistance([my - container.y, mx - container.x])<3)return; 
 
   this.d = getUnitVector(a);
 
