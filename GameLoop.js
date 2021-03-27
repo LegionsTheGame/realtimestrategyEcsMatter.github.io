@@ -11,6 +11,10 @@ for (var k = 0; k < 30; k++) {
   for (var l = 0; l < 30; l++) {
 
     let a = newArmy(250 * l + 100, k * 250);
+
+    //if(l<10)a.armySize =200;
+
+
     armies.push(a);
 
     //addDbugTextTo(a);

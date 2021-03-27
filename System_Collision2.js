@@ -12,6 +12,7 @@ function collisionSystem2_update_collision_grid(army, collision_grid, offset, gr
   //MULTIPLE ADD
   //MÅSKE HURTIGERE MED HARCODED BOUNDS ?!?!?!!?!?
   //var bounds = army.getBounds();
+  var army_bounds = army.armySize;
   var col1 = Math.floor((army.x - army_bounds / 2 - offset) / grid_size);
 
   if(col1 > 18 ) return;

@@ -32,5 +32,8 @@ function newArmy(armyPositionX, armypositionY){
   container.pivot.x = container.width / 2;
   container.pivot.y = container.height / 2;
 
+  //Speciel Army Data:
+  container.armySize = 60;
+
   return container;
 }

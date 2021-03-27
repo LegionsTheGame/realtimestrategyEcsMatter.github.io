@@ -7,4 +7,4 @@
 
 const grid1_size  = 120;
 
-const army_bounds = 60;
+// const army_bounds = 60;

@@ -11,12 +11,11 @@ function collisionSystem1_collsionHandling(container1) {
 }
 
 
-
 function move_away2(army1, army2) {
   var delta = [army1.x - army2.x, army1.y - army2.y];
   var delta_l = getDistance(delta);
   var unit1 = unitVector(delta);
-  var moveDist = 0.5 * (army_bounds - delta_l);
+  var moveDist = 0.5 *((army1.armySize + army2.armySize)/2 - delta_l);
   army1.x += unit1[0] * moveDist;
   army1.y += unit1[1] * moveDist;
   army2.x -= unit1[0] * moveDist;
@@ -31,7 +30,8 @@ function circle_collision_detect2(army1, army2) {
 
   var dist = Math.sqrt(delta_x * delta_x + delta_y * delta_y);
 
-  return army_bounds > dist;
+  return (army1.armySize + army2.armySize)/2 > dist;
+  //return army_bounds > dist;
 }
 /*
 function move_away(container1, container2) {
