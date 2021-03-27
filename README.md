@@ -14,18 +14,21 @@ Under udviklingen af spillet, har jeg defineret følgende principper:
 Nedenfor har jeg skrevet de vigtigste tanker vedrørende projektet. </br>
 Jeg har på forskellige tidspunkter haft forskellige fokuspunkter som man kan læse om nedenfor. 
 
+### D.27/3 -2021
+
+VIGTIG PERFORMANCE OPDAGELSE: globale var's er væsentlig hurtigere end opslag i et objekt. </br>
+</br>
+Jeg gjorde opdagelsen ved et tilfælde.</br>
+Her en besvarelse på stack-overflow, der inderbygger denne opdagelse:
+https://stackoverflow.com/questions/8789969/javascript-performance-multiple-variables-or-one-object
+
 ### D.26/3 -2021
 
-### NR 2
 Har erkendt at for tildelingen til "uniform grid" har spilobjektet størrelse som et "punkt"</br>
 Dette er ikke hensigsmæssigt!!!</br>
-En spilobjekt burde kunne være i to "felter" på samme tid
-
-### NR 1
-Introduktion af "army path following" </br>
-Min "Double Uniform Collision Detection" virker kun bedst hvis alle enheder ikke er på samme sted....</br>
+En spilobjekt burde kunne være i to "felter" på samme tid</br>
 </br>
-Her ses hvorfor "dobbelt grid" er nødvendigt:
+Nedenfor ses en grafisk-debug visning af problemet, de to enheder der overlapper er i hhv. "felt nr 21" og "felt nr 22" of kan altså ikke kollidere:</br>
 ![](pics/single_uniform_grid.png)
 
 
