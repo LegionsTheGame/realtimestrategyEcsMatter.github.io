@@ -14,6 +14,14 @@ Under udviklingen af spillet, har jeg defineret følgende principper:
 Nedenfor har jeg skrevet de vigtigste tanker vedrørende projektet. </br>
 Jeg har på forskellige tidspunkter haft forskellige fokuspunkter som man kan læse om nedenfor. 
 
+### D.27/3 -2021
+
+VIGTIG PERFORMANCE OPDAGELSE: globale var's er væsentlig hurtigere end opslag i et objekt. </br>
+</br>
+Jeg gjorde opdagelsen ved et tilfælde.</br>
+Her en besvarelse på stack-overflow, der inderbygger denne opdagelse:
+https://stackoverflow.com/questions/8789969/javascript-performance-multiple-variables-or-one-object
+
 ### D.26/3 -2021
 
 Har erkendt at for tildelingen til "uniform grid" har spilobjektet størrelse som et "punkt"</br>
