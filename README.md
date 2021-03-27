@@ -25,6 +25,7 @@ https://stackoverflow.com/questions/8789969/javascript-performance-multiple-vari
 RETTELSE I KODEN:</br>
 Resultatet er at jeg har erstatet "container.bounds.height" med en customized "army.armySize" </br>
 og laver kaldet færrer gange... tilsyneladende bedre
+Se commit: https://github.com/realtimestrategyEcsMatter/realtimestrategyEcsMatter.github.io/commit/0ee115660d7530db2aa21e30f4c0f9c75ee658c6
 
 ### D.26/3 -2021
 
