@@ -9,7 +9,7 @@ function newArmy(armyPositionX, armypositionY){
   PIXI.settings.SORTABLE_CHILDREN = true;
 
   // Create a new texture
-  let texture = PIXI.Texture.from('pics/explorer.png');
+  let texture = PIXI.Texture.from('pics/s.png');
 
   // Create a 5x5 grid of bunnies
   for (let i = 0; i < 16; i++) {

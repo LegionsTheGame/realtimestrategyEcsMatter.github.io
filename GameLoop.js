@@ -1,6 +1,6 @@
 //grid
 var collision_grid1 = [];
-var collision_grid2 = [];
+//var collision_grid2 = [];
 
 
 //array - spilobjekter
@@ -37,7 +37,7 @@ app.ticker.add((delta) => {
 
     //collisionSystem1_collsionHandling(a); //meget langsom collision handling
 
-    if (i != 10) {
+    if (i <200) {
       system_moveArmy(a);
     }
     updateDebugText(a);

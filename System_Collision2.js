@@ -10,11 +10,18 @@ function collisionSystem2_update_collision_grid(army, collision_grid, offset, gr
   collisionSystem2_addGamObject(collision_grid, index, army);*/
 
   //MULTIPLE ADD
-  var bounds = army.getBounds();
-  var col1 = Math.floor((army.x - bounds.width / 2 - offset) / grid_size);
-  var col2 = Math.floor((army.x + bounds.width / 2 - offset) / grid_size);
-  var row1 = Math.floor((army.y - bounds.height / 2 - offset) / grid_size);
-  var row2 = Math.floor((army.y + bounds.height / 2 - offset) / grid_size);
+  //MÅSKE HURTIGERE MED HARCODED BOUNDS ?!?!?!!?!?
+  //var bounds = army.getBounds();
+  var col1 = Math.floor((army.x - army_bounds / 2 - offset) / grid_size);
+
+  if(col1 > 18 ) return;
+
+  var col2 = Math.floor((army.x + army_bounds / 2 - offset) / grid_size);
+  var row1 = Math.floor((army.y - army_bounds / 2 - offset) / grid_size);
+
+  if(row1 > 10 ) return;
+
+  var row2 = Math.floor((army.y + army_bounds / 2 - offset) / grid_size);
 
   var index1 = col1 * 10 + row1;
   var index2 = col2 * 10 + row1;
@@ -54,7 +61,7 @@ function collisionSystem2_collisionHandling(collision_grid) {
         for (var k = 0; k < fieldList.length; k++) {
           var army2 = fieldList[k];
           if (army1 != army2) {
-            if (circle_collision_detect(army1, army2))
+            if (circle_collision_detect2(army1, army2))
               move_away(army1, army2);
           }
 

@@ -30,6 +30,16 @@ function move_away(container1, container2) {
   container2.y -= unit1[1] * moveDist;
 }
 
+
+function circle_collision_detect2(army1, army2) {
+  var delta_x = army1.x - army2.x;
+  var delta_y = army1.y - army2.y;
+
+  var dist = Math.sqrt(delta_x * delta_x + delta_y * delta_y);
+
+  return army_bounds > dist; 
+}
+
 function circle_collision_detect(bounds1, bounds2) {
   var a_center_x = bounds1.x + bounds1.width / 2;
   var a_center_y = bounds1.y + bounds1.height / 2;
