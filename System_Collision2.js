@@ -62,7 +62,7 @@ function collisionSystem2_collisionHandling(collision_grid) {
           var army2 = fieldList[k];
           if (army1 != army2) {
             if (circle_collision_detect2(army1, army2))
-              move_away(army1, army2);
+              move_away2(army1, army2);
           }
 
         }

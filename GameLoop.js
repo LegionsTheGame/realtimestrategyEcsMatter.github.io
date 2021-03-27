@@ -7,8 +7,8 @@ var collision_grid1 = [];
 var armies = [];
 
 //skabe - spilobjekter
-for (var k = 0; k < 15; k++) {
-  for (var l = 0; l < 10; l++) {
+for (var k = 0; k < 30; k++) {
+  for (var l = 0; l < 30; l++) {
 
     let a = newArmy(250 * l + 100, k * 250);
     armies.push(a);
@@ -26,6 +26,7 @@ gridDebug(grid1_size, 0, 1, 0xffffff); //0 er offset og 2 er strokeWidth
 app.ticker.add((delta) => {
 
   collision_grid1 = []; //GRIDSYSTEM  - 1 / 3
+
   //  collision_grid2 = [];
 
   for (var i = 0; i < armies.length; i++) {
@@ -37,9 +38,9 @@ app.ticker.add((delta) => {
 
     //collisionSystem1_collsionHandling(a); //meget langsom collision handling
 
-    if (i <200) {
+    //if (i <200) {
       system_moveArmy(a);
-    }
+    //}
     updateDebugText(a);
 
 

@@ -2,15 +2,38 @@ function collisionSystem1_collsionHandling(container1) {
   for (var j = 0; j < app.stage.children.length; j++) { //NOT FINISHED : shold only be all containers
     var container2 = app.stage.children[j];
     if (container2 == container1) return; //{                //Prevent "self collision"
-    if (circle_collision_detect(container1.getBounds(), container2.getBounds())) {
+    if (circle_collision_detect2(container1, container2)) {
       //COLISION DETECTED
-
-      move_away(container1, container2);
+      move_away2(container1, container2);
 
     }
   }
 }
 
+
+
+function move_away2(army1, army2) {
+  var delta = [army1.x - army2.x, army1.y - army2.y];
+  var delta_l = getDistance(delta);
+  var unit1 = unitVector(delta);
+  var moveDist = 0.5 * (army_bounds - delta_l);
+  army1.x += unit1[0] * moveDist;
+  army1.y += unit1[1] * moveDist;
+  army2.x -= unit1[0] * moveDist;
+  army2.y -= unit1[1] * moveDist;
+}
+
+
+
+function circle_collision_detect2(army1, army2) {
+  var delta_x = army1.x - army2.x;
+  var delta_y = army1.y - army2.y;
+
+  var dist = Math.sqrt(delta_x * delta_x + delta_y * delta_y);
+
+  return army_bounds > dist;
+}
+/*
 function move_away(container1, container2) {
   var bounds1 = container1.getBounds();
   var bounds2 = container2.getBounds();
@@ -30,16 +53,6 @@ function move_away(container1, container2) {
   container2.y -= unit1[1] * moveDist;
 }
 
-
-function circle_collision_detect2(army1, army2) {
-  var delta_x = army1.x - army2.x;
-  var delta_y = army1.y - army2.y;
-
-  var dist = Math.sqrt(delta_x * delta_x + delta_y * delta_y);
-
-  return army_bounds > dist; 
-}
-
 function circle_collision_detect(bounds1, bounds2) {
   var a_center_x = bounds1.x + bounds1.width / 2;
   var a_center_y = bounds1.y + bounds1.height / 2;
@@ -51,3 +64,4 @@ function circle_collision_detect(bounds1, bounds2) {
   var dist = Math.sqrt(delta_x * delta_x + delta_y * delta_y);
   return min_dist > dist; //Overlap of surrounding circle
 }
+*/
