@@ -21,6 +21,10 @@ VIGTIG PERFORMANCE OPDAGELSE: globale var's er væsentlig hurtigere end opslag i
 Jeg gjorde opdagelsen ved et tilfælde.</br>
 Her en besvarelse på stack-overflow, der inderbygger denne opdagelse:
 https://stackoverflow.com/questions/8789969/javascript-performance-multiple-variables-or-one-object
+</br>
+RETTELSE I KODEN:</br>
+Resultatet er at jeg har erstatet "container.bounds.height" med en customized "army.armySize" </br>
+og laver kaldet færrer gange... tilsyneladende bedre
 
 ### D.26/3 -2021
 
