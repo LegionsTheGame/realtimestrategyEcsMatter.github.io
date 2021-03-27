@@ -20,7 +20,7 @@ Har erkendt at for tildelingen til "uniform grid" har spilobjektet størrelse so
 Dette er ikke hensigsmæssigt!!!</br>
 En spilobjekt burde kunne være i to "felter" på samme tid</br>
 </br>
-Nedenfor ses en grafisk-debug visning af problemet:</br>
+Nedenfor ses en grafisk-debug visning af problemet, de to enheder der overlapper er i hhv. "felt nr 21" og "felt nr 22" of kan altså ikke kollidere:</br>
 ![](pics/single_uniform_grid.png)
 
 
