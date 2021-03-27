@@ -16,10 +16,10 @@ Jeg har på forskellige tidspunkter haft forskellige fokuspunkter som man kan l�
 
 ### D.27/3 -2021
 
-VIGTIG PERFORMANCE OPDAGELSE: globale var's er væsentlig hurtigere end opslag i et objekt. </br>
-</br>
+VIGTIG PERFORMANCE OPDAGELSE:</br> 
+Globale var's er væsentlig hurtigere end opslag i et objekt. </br>
 Jeg gjorde opdagelsen ved et tilfælde.</br>
-Her en besvarelse på stack-overflow, der inderbygger denne opdagelse:
+Her en besvarelse på stack-overflow, der inderbygger denne opdagelse:</br>
 https://stackoverflow.com/questions/8789969/javascript-performance-multiple-variables-or-one-object
 </br>
 RETTELSE I KODEN:</br>
