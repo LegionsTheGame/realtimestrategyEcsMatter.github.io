@@ -24,7 +24,7 @@ function system_moveArmy(container) {
 
   var a = Math.atan2(my - container.y, mx - container.x);
 
-if(getDistance([my - container.y, mx - container.x])<3)return; 
+if(getDistance([my - container.y, mx - container.x])<3)return;
 
   this.d = getUnitVector(a);
 
@@ -34,7 +34,4 @@ if(getDistance([my - container.y, mx - container.x])<3)return;
     container.y += this.d[1]*2;
 }
 
-//attempt to follow - touch events
-let mx = 100;
-let my = 100;
-app.renderer.plugins.interaction.on( 'pointerdown', ( event ) => { mx = event.data.global.x; my = event.data.global.y; console.log( event.data.global ); } );
+app.renderer.plugins.interaction.on( 'pointerdown', ( event ) => { touchDown = true; mx = event.data.global.x; my = event.data.global.y; console.log( event.data.global ); } );

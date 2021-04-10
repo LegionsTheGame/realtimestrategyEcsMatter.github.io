@@ -12,9 +12,6 @@ for (var k = 0; k < 30; k++) {
 
     let a = newArmy(250 * l + 100, k * 250);
 
-    //if(l<10)a.armySize =200;
-
-
     armies.push(a);
 
     //addDbugTextTo(a);
@@ -27,12 +24,32 @@ gridDebug(grid1_size, 0, 1, 0xffffff); //0 er offset og 2 er strokeWidth
 
 
 //Game loop
+
 app.ticker.add((delta) => {
 
   collision_grid1 = []; //GRIDSYSTEM  - 1 / 3
 
   //  collision_grid2 = [];
+//SELECTION SYSTEM/////////////////////////////////////////////////////////////////
+  if (touchDown) {
 
+    addWayPoint(mx,my);
+
+    for (var i = 0; i < armies.length; i++) {
+
+      var a = armies[i]; //virker ikke med for-in loop - ved ikke hvorfor ??
+
+      if (armySelector(a, mx, my)) {
+        selected_army = a;
+      }
+
+    }
+  }
+
+  touchDown = false;
+
+
+//MOVE AND COLLISION SYSTEM/////////////////////////////////////////////////////////
   for (var i = 0; i < armies.length; i++) {
 
     var a = armies[i]; //virker ikke med for-in loop - ved ikke hvorfor ??
@@ -42,11 +59,11 @@ app.ticker.add((delta) => {
 
     //collisionSystem1_collsionHandling(a); //meget langsom collision handling
 
-    //if (i <200) {
+    if (a === selected_army) {
       system_moveArmy(a);
-    //}
-    updateDebugText(a);
 
+    }
+    updateDebugText(a);
 
   }
 

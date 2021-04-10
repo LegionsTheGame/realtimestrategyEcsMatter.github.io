@@ -23,7 +23,6 @@ function move_away2(army1, army2) {
 }
 
 
-
 function circle_collision_detect2(army1, army2) {
   var delta_x = army1.x - army2.x;
   var delta_y = army1.y - army2.y;
