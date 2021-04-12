@@ -7,10 +7,13 @@ var collision_grid1 = [];
 var armies = [];
 
 //skabe - spilobjekter
+
 for (var k = 0; k < 30; k++) {
   for (var l = 0; l < 30; l++) {
 
-    let a = newArmy(250 * l + 100, k * 250);
+    let name ="army" + (l+k*30); //dette er bare et navn, unikt selvfølgelig
+
+    let a = newArmy(250 * l + 100, k * 250, name);
 
     armies.push(a);
 
@@ -33,8 +36,6 @@ app.ticker.add((delta) => {
 //SELECTION SYSTEM/////////////////////////////////////////////////////////////////
   if (touchDown) {
 
-    addWayPoint(mx,my);
-
     for (var i = 0; i < armies.length; i++) {
 
       var a = armies[i]; //virker ikke med for-in loop - ved ikke hvorfor ??
@@ -44,6 +45,12 @@ app.ticker.add((delta) => {
       }
 
     }
+
+    if(selected_army){
+      addWayPoint(mx,my,selected_army);
+    }
+
+
   }
 
   touchDown = false;

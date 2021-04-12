@@ -18,15 +18,26 @@ function armySelector(army, selected_x, selected_y) {
   return selected;
 }
 
+function drawWayPoint(selected_x, selected_y){
 
-function addWayPoint(selected_x, selected_y) {
-  var circle = new PIXI.Graphics();
+    var circle = new PIXI.Graphics();
 
-  // define outline = stroke
-  circle.lineStyle(2, 0x91CF46, 1);
+    // define outline = stroke
+    circle.lineStyle(2, 0x91CF46, 1);
 
-  // draw circle (x, y, radius)
-  circle.drawCircle(selected_x, selected_y, 20);
+    // draw circle (x, y, radius)
+    circle.drawCircle(selected_x, selected_y, 20);
 
-  app.stage.addChild(circle);
+    app.stage.addChild(circle);
+
+}
+
+
+function addWayPoint(selected_x, selected_y, army) {
+
+
+    army.wayPoints.push([selected_x,selected_y]);
+
+    drawWayPoint(selected_x, selected_y);
+
 }

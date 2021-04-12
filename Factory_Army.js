@@ -1,6 +1,15 @@
-function newArmy(armyPositionX, armypositionY){
+function newArmy(armyPositionX, armypositionY, armyName){
 
   let army = new PIXI.Container();
+
+  army.armyName = armyName;
+
+  army.wayPoints = [];
+
+  //Speciel Army Data: ///////////////////////////////////////////////
+  army.armySize = 60;
+  army.selected = false;
+
 
   app.stage.addChild(army);
 
@@ -26,9 +35,6 @@ function newArmy(armyPositionX, armypositionY){
   army.pivot.x = army.width / 2;
   army.pivot.y = army.height / 2;
 
-  //Speciel Army Data: ///////////////////////////////////////////////
-  army.armySize = 60;
-  army.selected = false;
 
 
   return army;
