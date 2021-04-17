@@ -1,10 +1,3 @@
-//grid
-var collision_grid1 = [];
-//var collision_grid2 = [];
-
-
-//array - spilobjekter
-var armies = [];
 
 //skabe - spilobjekter
 
@@ -48,6 +41,7 @@ app.ticker.add((delta) => {
 
     if(selected_army){
       addWayPoint(mx,my,selected_army);
+      console.log("Mouse pressed : " + mx + " " + my);
     }
 
 

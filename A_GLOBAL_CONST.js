@@ -1,24 +1,27 @@
-//COLLISION SYSTEM ////////////////////////////////////////////////////////////////
+//GAME OBJECTS ////////////////////////////////////////////////////////////////////
+//array - spilobjekter
+var armies = [];
 
+
+//COLLISION SYSTEM ////////////////////////////////////////////////////////////////
 //Gammel ide, med to forskellige collision grids - istedet anvender jeg nu et grid hvor et "objekt"
 //kan være i to "felter" på samme tid.
-//
-
-//const grid2_size  = 120;
-//const grid_offset = 0;
+var collision_grid1 = [];
 
 const grid1_size  = 100;
 
-// const army_bounds = 60;
 
 //MOUSE EVENT SYSTEM /////////////////////////////////////////////////////////////////
-
 //attempt to follow - touch events
 let mx        = 100;
 let my        = 100;
 let touchDown = false;
 
+
 //SELECTION SYSTEM /////////////////////////////////////////////////////////////////
-var wayPoints = [];
+
+var wayCirclePoints = []; //grafiske cirkler i pixijs
+
+                    //?positionen af cirklerne gemmes i den enkelte "army"
 
 var selected_army;
