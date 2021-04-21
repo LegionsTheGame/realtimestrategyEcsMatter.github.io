@@ -60,8 +60,9 @@ app.ticker.add((delta) => {
 
     //collisionSystem1_collsionHandling(a); //meget langsom collision handling
 
-    if (a === selected_army) {
-      system_moveArmy(a);
+    //if (a === selected_army) {
+    if(i < 100){
+      system_followWayPoints(a);
 
     }
     updateDebugText(a);
